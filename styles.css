@@ -1,0 +1,122 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Container */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 80%;
+    font-size: 1rem;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 15px;
+}
+
+textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+textarea[readonly] {
+    background-color: #f3f4f6;
+    color: #7b8794;
+}
+
+/* Buttons */
+button {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px 5px 0 0;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Results Section */
+#output {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+#output h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#output p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
