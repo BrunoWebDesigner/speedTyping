@@ -1,122 +1,129 @@
-/* General Styling */
+/* General styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9fafb;
-    color: #333;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Responsive Container */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     flex-direction: column;
-}
-
-h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-label {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #34495e;
-    margin-bottom: 5px;
-    display: block;
-}
-
-/* Container */
-.container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
     max-width: 600px;
-    width: 80%;
-    box-sizing: border-box;
+    padding: 20px;
 }
 
-/* Textarea Styling */
-textarea {
-    width: 80%;
-    font-size: 1rem;
-    border: 1px solid #dcdfe6;
-    border-radius: 8px;
-    padding: 10px;
-    box-sizing: border-box;
-    outline: none;
-    resize: none;
-    background-color: #fdfdfd;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    margin-bottom: 15px;
-}
-
-textarea:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
-}
-
-textarea[readonly] {
-    background-color: #f3f4f6;
-    color: #7b8794;
-}
-
-/* Buttons */
-button {
-    background-color: #3498db;
+/* Responsive Title */
+h1 {
     color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin: 10px 5px 0 0;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
-    background-color: #2980b9;
+/* Responsive Game Board */
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Responsive Cards */
+.card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
     transform: scale(1.05);
 }
 
-button:active {
-    transform: scale(0.95);
+.matched {
+    background-color: #2ecc71 !important;
+    color: #fff;
+    transform: scale(1.05);
 }
 
-/* Results Section */
-#output {
-    margin-top: 20px;
-    font-size: 1.2rem;
+/* Score & Timer */
+#score, #timer {
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Responsive Start Button */
+#startbtn {
+    padding: 10px 20px;
+    background-color: #f1c40f;
     color: #2c3e50;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
 }
 
-#output h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+#startbtn:hover {
+    background-color: #e67e22;
+    color: white;
+    transform: scale(1.05);
 }
 
-#output p {
-    margin: 5px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
+/* Media Queries for Smaller Screens */
+@media (max-width: 600px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    textarea {
-        font-size: 0.9rem;
+    #game-container {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        padding: 10px;
     }
 
-    button {
-        font-size: 0.9rem;
+    .card {
+        font-size: 18px;
+    }
+
+    #score, #timer {
+        font-size: 18px;
+    }
+
+    #startbtn {
+        font-size: 14px;
     }
 }
