@@ -1,4 +1,5 @@
 # Speed Typing Test
+[Live Demo](https://brunowebdesigner.github.io/speedTyping/)
 
 ## Overview
 A simple web-based typing speed and accuracy test that measures how fast and accurately users can type a given sentence. The test provides metrics such as Words Per Minute (WPM), typing accuracy, and the total number of words typed.
