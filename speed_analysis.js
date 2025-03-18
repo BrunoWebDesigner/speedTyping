@@ -51,6 +51,12 @@ let testTexts = [
     // Add additional sentences as needed
 ];
 
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        document.getElementById("startButton").click();
+    }
+});
+
 let startTime, endTime;
 
 function startTest() {
